@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Table(name = "tb_nacionalidade")
 @Entity
-public class Nacionalidade extends Ator {
+public class Nacionalidade extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 	
 	@Column(name = "nm_pais",length = 50)

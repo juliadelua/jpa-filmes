@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Table(name = "tb_filme")
 @Entity
-public class Filme extends RefId {
+public class Filme extends AbstractEntity {
     private static final long serialVersionUID = 1L;
     
     @Column(name = "nm_titulo",length = 50)
