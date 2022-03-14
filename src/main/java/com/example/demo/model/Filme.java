@@ -1,8 +1,11 @@
 package com.example.demo.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.ManyToMany;
 
 @Table(name = "tb_filme")
 @Entity
@@ -14,6 +17,9 @@ public class Filme extends AbstractEntity {
     
     @Column(name = "dt_filme",length = 20)
     private int ano;
+    
+    @ManyToMany
+    private List<Ator> atores;
     
     public Filme () {
     	
@@ -30,6 +36,10 @@ public class Filme extends AbstractEntity {
 	}
 	public void setAno(int ano) {
 		this.ano = ano;
+	}
+	
+	public List<Ator> getAtores() {
+		return atores;
 	}
 
 }
