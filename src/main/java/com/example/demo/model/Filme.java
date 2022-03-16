@@ -18,7 +18,7 @@ public class Filme extends AbstractEntity {
     @Column(name = "dt_filme",length = 20)
     private int ano;
     
-    @ManyToMany
+    @ManyToMany(cascade=CascadeType.ALL)
     private List<Ator> atores;
     
     public Filme () {
